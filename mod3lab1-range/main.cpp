@@ -1,3 +1,7 @@
+//Addison Teschan
+//February 3 2024
+//This program takes two numbers and finds the count of numbers in the range that are multiples of 3 and 5 
+
 #include<iostream>
 
 using namespace std;
@@ -26,7 +30,7 @@ int main(){
     }
   }
   
-  cout << "The lower rangee: " << lower << endl;
+  cout << "The lower range: " << lower << endl;
   cout << "The upper range: " << upper << endl;
 
   cout << "The count of numbers in the range that are multiples of 3: " << ct3 << endl;
