@@ -2,7 +2,7 @@
 //  Programming 1 Course Projects
 //  main.cpp
 //  Course COSC-1336
-//  Jan 26 2024 Feb 1 2024 Feb 10 2024
+//  Jan 26 2024 Feb 1 2024 Feb 10 2024 Feb 15 2024
 // Overall course project I will be contributing to
  
 
@@ -16,27 +16,21 @@ void calculateLetterGrade();
 void createRightTriangle();
 void calculateWeeklyPay(double rate, int hours);
 void calculateInterestEarned();
+void printHeader();
+void firstLast(string &firstName, string &lastName);
 
 int main()
 {
-    //prompt user for first name and store
-    cout << "What is your first name?" << endl;
-    string firstName;
-    cin >> firstName;
-    //prompt user for last name and store   
-    cout << "What is your last name?" << endl;
-    string lastName;
-    cin >> lastName;
+    string firstName = "", lastName = "";
+    firstLast(firstName, lastName);
 
     //Output a welcome message to the user
-    cout << "Welcome to my programming project " << firstName << " " << lastName << endl;
+
   while (true){
     int selection;
 
     //Output welcome header      
-    cout << "**********************************************\n*         Programming 1 Course Project       *\n**********************************************" << endl;
-
-
+    printHeader();
     //Output a menu of options to the user
     cout << "|--------------------------------------------|" << endl;
     cout << "|   Enter 1 to calculate the sqaure root     |\n|   Enter 2 to raise X to the Y power        |\n|   Enter 3 to calculate letter grade        |\n|   Enter 4 to create a right triangle       |\n|   Enter 5 to calculate weekly pay          |\n|   Enter 6 calculate interest earned        |" << endl;
@@ -90,6 +84,18 @@ int main()
   }
     
     return 0;
+}
+
+void firstLast(string &firstName, string &lastName){
+  cout << "Enter your first name: ";
+  cin >> firstName;
+  cout << "Enter your last name: ";
+  cin >> lastName;
+  cout << "Welcome to my programming project " << firstName << " " << lastName << endl;
+}
+
+void printHeader(){
+  cout << "**********************************************\n*         Programming 1 Course Project       *\n**********************************************" << endl;
 }
 
 void calculateLetterGrade(){
